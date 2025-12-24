@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ofm_ofm,ofm.ofm,model_ofm_ofm,base.group_user,1,1,1,1
+access_participante_artista,ofm.artista,model_ofm_artista,base.group_user,1,1,1,1
+access_participante_staff,ofm.staff,model_ofm_staff,base.group_user,1,1,1,1

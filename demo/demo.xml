@@ -5,26 +5,100 @@
             <field name="name">Object 0</field>
             <field name="value">0</field>
           </record>
-
-          <record id="object1" model="ofm.ofm">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
-
-          <record id="object2" model="ofm.ofm">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="ofm.ofm">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="ofm.ofm">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
 -->
+<!-- Demo Adrian -->
+      <!-- Artistas -->
+      <record id="artista_1" model="ofm.artista">
+        <field name="nombre">Artista Uno</field>
+        <field name="nacionalidad" ref="base.es"/>
+        <field name="dni">12345678A</field>
+        <field name="genero_musical">Rock</field>
+        <field name="cache">1500</field>
+        <field name="rider_tecnico">Guitarra, batería, micrófono</field>
+      </record>
+      <record id="artista_2" model="ofm.artista">
+        <field name="nombre">Artista Dos</field>
+        <field name="nacionalidad" ref="base.mx"/>
+        <field name="dni">23456789B</field>
+        <field name="genero_musical">Pop</field>
+        <field name="cache">2000</field>
+        <field name="rider_tecnico">Teclado, luces</field>
+      </record>
+      <record id="artista_3" model="ofm.artista">
+        <field name="nombre">Artista Tres</field>
+        <field name="nacionalidad" ref="base.ar"/>
+        <field name="dni">34567890C</field>
+        <field name="genero_musical">Jazz</field>
+        <field name="cache">1800</field>
+        <field name="rider_tecnico">Saxofón, piano</field>
+      </record>
+      <record id="artista_4" model="ofm.artista">
+        <field name="nombre">Artista Cuatro</field>
+        <field name="nacionalidad" ref="base.co"/>
+        <field name="dni">45678901D</field>
+        <field name="genero_musical">Reggaeton</field>
+        <field name="cache">2200</field>
+        <field name="rider_tecnico">DJ, consola</field>
+      </record>
+      <record id="artista_5" model="ofm.artista">
+        <field name="nombre">Artista Cinco</field>
+        <field name="nacionalidad" ref="base.cl"/>
+        <field name="dni">56789012E</field>
+        <field name="genero_musical">Electrónica</field>
+        <field name="cache">2500</field>
+        <field name="rider_tecnico">Sintetizador, laptop</field>
+      </record>
+
+      <!-- Staffs -->
+      <record id="staff_1" model="ofm.staff">
+        <field name="nombre">Staff Uno</field>
+        <field name="nacionalidad" ref="base.es"/>
+        <field name="dni">A1234567</field>
+        <field name="rol">seguridad</field>
+        <field name="turno">Mañana</field>
+        <field name="salario">1200</field>
+      </record>
+      <record id="staff_2" model="ofm.staff">
+        <field name="nombre">Staff Dos</field>
+        <field name="nacionalidad" ref="base.mx"/>
+        <field name="dni">B2345678</field>
+        <field name="rol">tecnico</field>
+        <field name="turno">Tarde</field>
+        <field name="salario">1300</field>
+      </record>
+      <record id="staff_3" model="ofm.staff">
+        <field name="nombre">Staff Tres</field>
+        <field name="nacionalidad" ref="base.ar"/>
+        <field name="dni">C3456789</field>
+        <field name="rol">seguridad</field>
+        <field name="turno">Noche</field>
+        <field name="salario">1250</field>
+      </record>
+      <record id="staff_4" model="ofm.staff">
+        <field name="nombre">Staff Cuatro</field>
+        <field name="nacionalidad" ref="base.co"/>
+        <field name="dni">D4567890</field>
+        <field name="rol">tecnico</field>
+        <field name="turno">Mañana</field>
+        <field name="salario">1350</field>
+      </record>
+      <record id="staff_5" model="ofm.staff">
+        <field name="nombre">Staff Cinco</field>
+        <field name="nacionalidad" ref="base.cl"/>
+        <field name="dni">E5678901</field>
+        <field name="rol">seguridad</field>
+        <field name="turno">Tarde</field>
+        <field name="salario">1400</field>
+      </record>
+<!-- Fin Demo Adrian -->
+
+<!-- Demo Jesus -->
+
+<!-- Fin Demo Jesus -->
+
+<!-- Demo Victor -->
+
+<!-- Fin Demo Victor -->
+
     </data>
 </odoo>

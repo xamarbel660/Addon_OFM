@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+
+    <record id="staff_list_action" model="ir.actions.act_window">
+      <field name="name">Staff</field>
+      <field name="res_model">ofm.staff</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Crea al primer Staff</p>
+      </field>
+    </record>
+
+    <record id="ofm_staff_form_view" model="ir.ui.view">
+      <field name="name">ofm.staff.form</field>
+      <field name="model">ofm.staff</field>
+      <field name="arch" type="xml">
+        <form string="Staffs">
+          <sheet layout="auto">
+
+            <group>
+              <group>
+                <field name="nombre" />
+                <field name="nacionalidad" />
+                <field name="dni" />
+              </group>
+              <group>
+                <field name="rol" />
+                <field name="turno" />
+                <field name="salario" />
+              </group>
+            </group>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="ofm_staff_tree_view" model="ir.ui.view">
+      <field name="name">ofm.staff.tree</field>
+      <field name="model">ofm.staff</field>
+      <field name="arch" type="xml">
+        <tree string="tree_string">
+          <field name="nombre" />
+          <field name="rol" />
+          <field name="turno" />
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

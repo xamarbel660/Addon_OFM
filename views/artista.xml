@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+
+    <record id="artista_list_action" model="ir.actions.act_window">
+      <field name="name">Artista</field>
+      <field name="res_model">ofm.artista</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Crea al primer Artista</p>
+      </field>
+    </record>
+
+    <record id="ofm_artista_form_view" model="ir.ui.view">
+      <field name="name">ofm.artista.form</field>
+      <field name="model">ofm.artista</field>
+      <field name="arch" type="xml">
+        <form string="Artistas">
+          <sheet layout="auto">
+            <group>
+              <group>
+                <field name="nombre" />
+                <field name="nacionalidad" />
+                <field name="dni" />
+              </group>
+              <group>
+                <field name="genero_musical" />
+                <field name="cache" />
+                <field name="rider_tecnico" />
+              </group>
+            </group>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="ofm_artista_tree_view" model="ir.ui.view">
+      <field name="name">ofm.artista.tree</field>
+      <field name="model">ofm.artista</field>
+      <field name="arch" type="xml">
+        <tree string="tree_string">
+          <field name="nombre" />
+          <field name="genero_musical" />
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>
