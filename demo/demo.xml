@@ -9,7 +9,7 @@
 <!-- Demo Adrian -->
       <!-- Artistas -->
       <record id="artista_1" model="ofm.artista">
-        <field name="nombre">Artista Uno</field>
+        <field name="nombre">Sofía Ramírez</field>
         <field name="nacionalidad" ref="base.es"/>
         <field name="dni">12345678A</field>
         <field name="genero_musical">Rock</field>
@@ -17,7 +17,7 @@
         <field name="rider_tecnico">Guitarra, batería, micrófono</field>
       </record>
       <record id="artista_2" model="ofm.artista">
-        <field name="nombre">Artista Dos</field>
+        <field name="nombre">Carlos Méndez</field>
         <field name="nacionalidad" ref="base.mx"/>
         <field name="dni">23456789B</field>
         <field name="genero_musical">Pop</field>
@@ -25,7 +25,7 @@
         <field name="rider_tecnico">Teclado, luces</field>
       </record>
       <record id="artista_3" model="ofm.artista">
-        <field name="nombre">Artista Tres</field>
+        <field name="nombre">Valentina Torres</field>
         <field name="nacionalidad" ref="base.ar"/>
         <field name="dni">34567890C</field>
         <field name="genero_musical">Jazz</field>
@@ -33,7 +33,7 @@
         <field name="rider_tecnico">Saxofón, piano</field>
       </record>
       <record id="artista_4" model="ofm.artista">
-        <field name="nombre">Artista Cuatro</field>
+        <field name="nombre">Juan Pablo Ríos</field>
         <field name="nacionalidad" ref="base.co"/>
         <field name="dni">45678901D</field>
         <field name="genero_musical">Reggaeton</field>
@@ -41,17 +41,99 @@
         <field name="rider_tecnico">DJ, consola</field>
       </record>
       <record id="artista_5" model="ofm.artista">
-        <field name="nombre">Artista Cinco</field>
+        <field name="nombre">Camila Fernández</field>
         <field name="nacionalidad" ref="base.cl"/>
         <field name="dni">56789012E</field>
         <field name="genero_musical">Electrónica</field>
         <field name="cache">2500</field>
         <field name="rider_tecnico">Sintetizador, laptop</field>
       </record>
+      <record id="artista_6" model="ofm.artista">
+        <field name="nombre">Mariana Suárez</field>
+        <field name="nacionalidad" ref="base.pe"/>
+        <field name="dni">67890123F</field>
+        <field name="genero_musical">Indie</field>
+        <field name="cache">1700</field>
+        <field name="rider_tecnico">Guitarra acústica, pedalera</field>
+      </record>
+      <record id="artista_7" model="ofm.artista">
+        <field name="nombre">Gabriel Ortiz</field>
+        <field name="nacionalidad" ref="base.uy"/>
+        <field name="dni">78901234G</field>
+        <field name="genero_musical">Folk</field>
+        <field name="cache">1600</field>
+        <field name="rider_tecnico">Violín, micrófono inalámbrico</field>
+      </record>
+      <record id="artista_8" model="ofm.artista">
+        <field name="nombre">Daniela Paredes</field>
+        <field name="nacionalidad" ref="base.ec"/>
+        <field name="dni">89012345H</field>
+        <field name="genero_musical">Salsa</field>
+        <field name="cache">2100</field>
+        <field name="rider_tecnico">Congas, micrófono</field>
+      </record>
+      <record id="artista_9" model="ofm.artista">
+        <field name="nombre">Ricardo Silva</field>
+        <field name="nacionalidad" ref="base.ve"/>
+        <field name="dni">90123456I</field>
+        <field name="genero_musical">Cumbia</field>
+        <field name="cache">1550</field>
+        <field name="rider_tecnico">Acordeón, bajo</field>
+      </record>
+      <record id="artista_10" model="ofm.artista">
+        <field name="nombre">Elena Navarro</field>
+        <field name="nacionalidad" ref="base.bo"/>
+        <field name="dni">01234567J</field>
+        <field name="genero_musical">Clásica</field>
+        <field name="cache">3000</field>
+        <field name="rider_tecnico">Piano de cola</field>
+      </record>
+      
+      <!-- Artistas extra para gráfica -->
+      <record id="artista_11" model="ofm.artista">
+        <field name="nombre">Pedro Alarcón</field>
+        <field name="nacionalidad" ref="base.es"/>
+        <field name="dni">11223344K</field>
+        <field name="genero_musical">Rock</field>
+        <field name="cache">1700</field>
+        <field name="rider_tecnico">Guitarra eléctrica, amplificador</field>
+      </record>
+      <record id="artista_12" model="ofm.artista">
+        <field name="nombre">Ana Beltrán</field>
+        <field name="nacionalidad" ref="base.mx"/>
+        <field name="dni">22334455L</field>
+        <field name="genero_musical">Pop</field>
+        <field name="cache">2100</field>
+        <field name="rider_tecnico">Micrófono, luces LED</field>
+      </record>
+      <record id="artista_13" model="ofm.artista">
+        <field name="nombre">Javier Molina</field>
+        <field name="nacionalidad" ref="base.ar"/>
+        <field name="dni">33445566M</field>
+        <field name="genero_musical">Jazz</field>
+        <field name="cache">1850</field>
+        <field name="rider_tecnico">Contrabajo, piano</field>
+      </record>
+      <record id="artista_14" model="ofm.artista">
+        <field name="nombre">Lucía Vargas</field>
+        <field name="nacionalidad" ref="base.co"/>
+        <field name="dni">44556677N</field>
+        <field name="genero_musical">Rock</field>
+        <field name="cache">1950</field>
+        <field name="rider_tecnico">Batería, guitarra</field>
+      </record>
+      <record id="artista_15" model="ofm.artista">
+        <field name="nombre">Matías Pino</field>
+        <field name="nacionalidad" ref="base.cl"/>
+        <field name="dni">55667788O</field>
+        <field name="genero_musical">Pop</field>
+        <field name="cache">2300</field>
+        <field name="rider_tecnico">Teclado, micrófono</field>
+      </record>
 
       <!-- Staffs -->
       <record id="staff_1" model="ofm.staff">
-        <field name="nombre">Staff Uno</field>
+        <field name="nombre">Miguel Herrera</field>
         <field name="nacionalidad" ref="base.es"/>
         <field name="dni">A1234567</field>
         <field name="rol">seguridad</field>
@@ -59,7 +141,7 @@
         <field name="salario">1200</field>
       </record>
       <record id="staff_2" model="ofm.staff">
-        <field name="nombre">Staff Dos</field>
+        <field name="nombre">Lucía González</field>
         <field name="nacionalidad" ref="base.mx"/>
         <field name="dni">B2345678</field>
         <field name="rol">tecnico</field>
@@ -67,7 +149,7 @@
         <field name="salario">1300</field>
       </record>
       <record id="staff_3" model="ofm.staff">
-        <field name="nombre">Staff Tres</field>
+        <field name="nombre">Andrés López</field>
         <field name="nacionalidad" ref="base.ar"/>
         <field name="dni">C3456789</field>
         <field name="rol">seguridad</field>
@@ -75,7 +157,7 @@
         <field name="salario">1250</field>
       </record>
       <record id="staff_4" model="ofm.staff">
-        <field name="nombre">Staff Cuatro</field>
+        <field name="nombre">Paula Martínez</field>
         <field name="nacionalidad" ref="base.co"/>
         <field name="dni">D4567890</field>
         <field name="rol">tecnico</field>
@@ -83,12 +165,52 @@
         <field name="salario">1350</field>
       </record>
       <record id="staff_5" model="ofm.staff">
-        <field name="nombre">Staff Cinco</field>
+        <field name="nombre">Diego Castro</field>
         <field name="nacionalidad" ref="base.cl"/>
         <field name="dni">E5678901</field>
         <field name="rol">seguridad</field>
         <field name="turno">Tarde</field>
         <field name="salario">1400</field>
+      </record>
+      <record id="staff_6" model="ofm.staff">
+        <field name="nombre">Santiago Ruiz</field>
+        <field name="nacionalidad" ref="base.pe"/>
+        <field name="dni">F6789012</field>
+        <field name="rol">tecnico</field>
+        <field name="turno">Noche</field>
+        <field name="salario">1450</field>
+      </record>
+      <record id="staff_7" model="ofm.staff">
+        <field name="nombre">Valeria Morales</field>
+        <field name="nacionalidad" ref="base.uy"/>
+        <field name="dni">G7890123</field>
+        <field name="rol">seguridad</field>
+        <field name="turno">Mañana</field>
+        <field name="salario">1500</field>
+      </record>
+      <record id="staff_8" model="ofm.staff">
+        <field name="nombre">Fernando Cabrera</field>
+        <field name="nacionalidad" ref="base.ec"/>
+        <field name="dni">H8901234</field>
+        <field name="rol">tecnico</field>
+        <field name="turno">Tarde</field>
+        <field name="salario">1380</field>
+      </record>
+      <record id="staff_9" model="ofm.staff">
+        <field name="nombre">Isabel Vega</field>
+        <field name="nacionalidad" ref="base.ve"/>
+        <field name="dni">I9012345</field>
+        <field name="rol">seguridad</field>
+        <field name="turno">Noche</field>
+        <field name="salario">1420</field>
+      </record>
+      <record id="staff_10" model="ofm.staff">
+        <field name="nombre">Martín Peña</field>
+        <field name="nacionalidad" ref="base.bo"/>
+        <field name="dni">J0123456</field>
+        <field name="rol">tecnico</field>
+        <field name="turno">Mañana</field>
+        <field name="salario">1480</field>
       </record>
 <!-- Fin Demo Adrian -->
 

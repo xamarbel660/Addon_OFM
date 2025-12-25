@@ -47,5 +47,21 @@
       </field>
     </record>
 
+
+    <record id="ofm_staff_search_view" model="ir.ui.view">
+      <field name="name">ofm.staff.search</field>
+      <field name="model">ofm.staff</field>
+      <field name="arch" type="xml">
+        <search string="Search">
+          <filter string="Solo Técnicos" name="tecnicos" domain="[('rol', '=', 'tecnico')]"/>
+          <filter string="Solo Seguridad" name="seguridad" domain="[('rol', '=', 'seguridad')]"/>
+          <group expand="1" string="Agrupar por">
+            <filter string="Rol" name="group_by_rol" context="{'group_by':'rol'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+
   </data>
 </odoo>
