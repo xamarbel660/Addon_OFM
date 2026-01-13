@@ -25,9 +25,14 @@
                 <field name="dni" />
               </group>
               <group>
-                <field name="rol" />
+                <field name="rol" widget="statusbar" />
                 <field name="turno" />
                 <field name="salario" />
+              </group>
+              <!-- Botones para cambiar de rol -->
+              <group>
+                <button name="btn_rol_to_seguridad" string="Seguridad" type="object" class="oe_highlight" title="Cambiar rol a Seguridad"/>
+                <button name="btn_rol_to_tecnico" string="Técnico" type="object" class="oe_highlight" title="Cambiar rol a Técnico"/>
               </group>
             </group>
 
@@ -55,8 +60,15 @@
       <field name="model">ofm.staff</field>
       <field name="arch" type="xml">
         <search string="Search">
+          <!-- Filtros personalizados -->
           <filter string="Solo Técnicos" name="tecnicos" domain="[('rol', '=', 'tecnico')]"/>
+          <!-- Sirve para separar los filtros -->
+          <!-- <separator/> -->
           <filter string="Solo Seguridad" name="seguridad" domain="[('rol', '=', 'seguridad')]"/>
+          <!-- Filtro al buscar en el buscador -->
+          <field name="nombre" />
+          <field name="rol" />
+          <!-- Agrupación personalizado -->
           <group expand="1" string="Agrupar por">
             <filter string="Rol" name="group_by_rol" context="{'group_by':'rol'}"/>
           </group>

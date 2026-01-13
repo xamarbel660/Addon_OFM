@@ -10,6 +10,7 @@
       </field>
     </record>
 
+    <!-- FORM -->
     <record id="ofm_artista_form_view" model="ir.ui.view">
       <field name="name">ofm.artista.form</field>
       <field name="model">ofm.artista</field>
@@ -34,6 +35,7 @@
       </field>
     </record>
 
+    <!-- TREE -->
     <record id="ofm_artista_tree_view" model="ir.ui.view">
       <field name="name">ofm.artista.tree</field>
       <field name="model">ofm.artista</field>
@@ -45,30 +47,24 @@
       </field>
     </record>
 
-    <!-- Grafica -->
+    <!-- GRAFICA -->
     <record model="ir.ui.view" id="ofm_artista_graph">
       <field name="name">Artistas</field>
       <field name="model">ofm.artista</field>
       <field name="arch" type="xml">
         <graph string="Cache por artista" type="bar">
-          <field name="nombre" type="row"/>
-          <!-- <field name="genero_musical" type="row"/> -->
+          <field name="genero_musical" type="row"/>
           <field name="cache" type="measure"/>
-
         </graph>
       </field>
     </record>
 
-    <!-- Kanban, buscar como se hace -->
+    <!-- KANBAN, buscar como se hace -->
     <record id="ofm_artista_kanban_view" model="ir.ui.view">
       <field name="name">ofm.artista.kanban</field>
       <field name="model">ofm.artista</field>
       <field name="arch" type="xml">
         <kanban>
-          <field name="nombre"/>
-          <field name="genero_musical"/>
-          <field name="cache"/>
-          <field name="id"/>
           <templates>
             <t t-name="kanban-box">
               <!-- La tarjeta en si -->

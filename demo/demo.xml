@@ -85,7 +85,7 @@
         <field name="nacionalidad" ref="base.bo"/>
         <field name="dni">01234567J</field>
         <field name="genero_musical">Clásica</field>
-        <field name="cache">3000</field>
+        <field name="cache">2500</field>
         <field name="rider_tecnico">Piano de cola</field>
       </record>
       
