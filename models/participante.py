@@ -12,6 +12,7 @@ class Participante(models.Model):
     dni = fields.Char(string="DNI", required=True, help="DNI del participante", size=9)
     
     # Restricción de unicidad en el campo DNI
+    
     _sql_constraints = [
         ('dni_uniq',
         'UNIQUE (dni)',

@@ -26,11 +26,11 @@ class Artista(models.Model):
                 "El caché del artista debe ser inferior a 3.000€."
             )
 
-    # Restricción SQL para que el salario no sea negativo
+    # Restricción SQL para que el salario no sea negativo o 0
     _sql_constraints = [
         (
             "salario_positivo_check",
-            "CHECK(salario >= 0)",
-            "El salario no puede ser negativo.",
+            "CHECK(salario > 0)",
+            "El salario no puede ser negativo o 0.",
         )
 ]

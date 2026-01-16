@@ -23,10 +23,13 @@
     "depends": ["base"],
     # always loaded
     "data": [
-        'security/ir.model.access.csv',
+        "security/ir.model.access.csv",
         "views/artista.xml",
         "views/staff.xml",
         "views/menu_view.xml",
+        "reports/reports.xml",
+        "reports/artista_report.xml",
+        "reports/staff_report.xml",
     ],
     # only loaded in demonstration mode
     "demo": [

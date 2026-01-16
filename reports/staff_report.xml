@@ -1,0 +1,106 @@
+<odoo>
+    <template id="report_staff_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <h2 class="text-center">Ficha de Empleado</h2>
+                        <h4 class="text-center text-muted">
+                            <span t-field="o.rol"/>
+                        </h4>
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Nombre Completo:</strong>
+                                    <span t-field="o.nombre"/>
+                                </p>
+                                <p>
+                                    <strong>Documento (DNI):</strong>
+                                    <span t-field="o.dni"/>
+                                </p>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Turno Asignado</th>
+                                    <th>Salario Mensual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.turno"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.salario"/>
+ €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
+
+<!--
+Version mejorada
+<template id="report_staff_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size: 15px;">
+                        
+                        <div class="row mb-4 align-items-center">
+                            <div class="col-8">
+                                <h2 style="color: #2980b9; margin: 0;">Ficha de Personal</h2>
+                                <p style="color: #7f8c8d;">Documento interno de RRHH</p>
+                            </div>
+                            <div class="col-4 text-right">
+                                <h3 style="background-color: #2980b9; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+                                    <span t-field="o.rol"/>
+                                </h3>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 2px solid #2980b9; margin-bottom: 20px;"></div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; height: 100%;">
+                                    <h5 style="color: #2980b9;">Datos Personales</h5>
+                                    <p><strong>Nombre:</strong> <span t-field="o.nombre"/></p>
+                                    <p><strong>DNI:</strong> <span t-field="o.dni"/></p>
+                                    <p><strong>Nacionalidad:</strong> <span t-field="o.nacionalidad"/></p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; height: 100%; background-color: #f4f6f7;">
+                                    <h5 style="color: #2980b9;">Condiciones Laborales</h5>
+                                    <p><strong>Turno Asignado:</strong> <span t-field="o.turno"/></p>
+                                    <p><strong>Salario Mensual:</strong> <span t-field="o.salario"/> €</p>
+                                    
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-12 text-center" style="color: #999; font-size: 12px;">
+                                <p>Este documento es confidencial y para uso exclusivo de la organización del festival.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+-->
