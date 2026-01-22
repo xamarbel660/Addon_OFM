@@ -31,6 +31,8 @@ class Staff(models.Model):
     def btn_rol_to_tecnico(self):
         self.write({'rol':'tecnico'})
 
+        #borrar
+
 
     # Onchange para el salario dependiendo del rol
     @api.onchange('rol','salario')
