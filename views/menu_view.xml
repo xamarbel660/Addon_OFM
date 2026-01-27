@@ -9,10 +9,14 @@
         <!-- menu categories MODELO -->
         <menuitem name="Artista" id="ofm.artista" parent="ofm.menu_root"/>
         <menuitem name="Staff" id="ofm.staff" parent="ofm.menu_root"/>
+        <menuitem name="Actuacion" id="ofm.actuacion" parent="ofm.menu_root"/>
+        <menuitem name="Entrada" id="ofm.entrada" parent="ofm.menu_root"/>
 
         <!-- actions -->
         <menuitem name="Listado de artistas" id="artista_menu_listado" parent="ofm.artista" action="artista_list_action"/>
         <menuitem name="Listado de staffs" id="staff_menu_listado" parent="ofm.staff" action="staff_list_action"/>
+        <menuitem name="Listado de actuaciones" id="actuacion_menu_listado" parent="ofm.actuacion" action="actuacion_list_action"/>
+        <menuitem name="Listado de entradas" id="entrada_menu_listado" parent="ofm.entrada" action="entrada_list_action"/>
 
     </data>
 </odoo>

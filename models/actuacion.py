@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class Actuacion(models.Model):
-    _name = "fiesta.actuacion"
+    _name = "ofm.actuacion"
     _description = "Actuación de la fiesta"
 
     name = fields.Char(string="Nombre", required=True)
@@ -10,10 +10,15 @@ class Actuacion(models.Model):
     descripcion = fields.Text(string="Descripción de la actuación")
 
     entrada_ids = fields.One2many(
-    comodel_name="fiesta.entrada",
-    inverse_name="actuacion_id",
-    string="Entradas"
-)
+        comodel_name="ofm.entrada",
+        inverse_name="actuacion_id",
+        string="Entradas"
+    )
+
+    artista_ids = fields.Many2many(
+        comodel_name="ofm.artista",
+        string="Artistas"
+    )
     
     cant_entradas = fields.Integer(string="Cantidad de entradas", compute="_compute_cant_entradas", store=True)
     

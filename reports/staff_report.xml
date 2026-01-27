@@ -7,10 +7,12 @@
 
                         <h2 class="text-center">Ficha de Empleado</h2>
                         <h4 class="text-center text-muted">
+                            <strong>Rol:</strong>
                             <span t-field="o.rol"/>
                         </h4>
                         <br/>
 
+                        <h3>Datos Personales</h3>
                         <div class="row">
                             <div class="col-12">
                                 <p>
@@ -18,32 +20,39 @@
                                     <span t-field="o.nombre"/>
                                 </p>
                                 <p>
-                                    <strong>Documento (DNI):</strong>
+                                    <strong>DNI:</strong>
                                     <span t-field="o.dni"/>
+                                </p>
+                                <p>
+                                    <strong>Nacionalidad:</strong>
+                                    <span t-field="o.nacionalidad"/>
+                                </p>
+                                <p>
+                                    <strong>Fecha de Nacimiento:</strong>
+                                    <span t-field="o.fecha_nacimiento"/>
                                 </p>
                             </div>
                         </div>
 
                         <br/>
 
-                        <table class="table table-sm table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Turno Asignado</th>
-                                    <th>Salario Mensual</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span t-field="o.turno"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.salario"/>
- €</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h3>Condiciones Laborales</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Turno Asignado:</strong>
+                                    <span t-field="o.turno"/>
+                                </p>
+                                <p>
+                                    <strong>Salario Mensual:</strong>
+                                    <span t-field="o.salario"/>
+                                </p>
+                                <p>
+                                    <strong>Activo:</strong>
+                                    <span t-field="o.activo"/>
+                                </p>
+                            </div>
+                        </div>
 
                     </div>
                 </t>

@@ -6,10 +6,15 @@
                     <div class="page">
 
                         <h2 class="text-center">Ficha del Artista</h2>
+                        <h4 class="text-center text-muted">
+                            <strong>Género Musical:</strong>
+                            <span t-field="o.genero_musical"/>
+                        </h4>
                         <br/>
 
+                        <h3>Datos Personales</h3>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                                 <p>
                                     <strong>Nombre:</strong>
                                     <span t-field="o.nombre"/>
@@ -18,47 +23,44 @@
                                     <strong>DNI:</strong>
                                     <span t-field="o.dni"/>
                                 </p>
-                            </div>
-                            <div class="col-6 text-right">
                                 <p>
                                     <strong>Nacionalidad:</strong>
                                     <span t-field="o.nacionalidad"/>
                                 </p>
                                 <p>
-                                    <strong>Género:</strong>
-                                    <span t-field="o.genero_musical"/>
+                                    <strong>Fecha de Nacimiento:</strong>
+                                    <span t-field="o.fecha_nacimiento"/>
                                 </p>
                             </div>
                         </div>
 
                         <br/>
 
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Concepto</th>
-                                    <th>Detalle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <strong>Caché</strong>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.cache"/>€
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>Rider Técnico</strong>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.rider_tecnico"/>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h3>Especificaciones Técnicas</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Rider Técnico:</strong>
+                                    <span t-field="o.rider_tecnico"/>
+                                </p>
+                                <p>
+                                    <strong>Cache:</strong>
+                                    <span t-field="o.cache"/>
+                                </p>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <h3>Actuaciones</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Actuaciones:</strong>
+                                    <span t-field="o.actuacion_ids"/>
+                                </p>
+                            </div>
+                        </div>
 
                     </div>
                 </t>

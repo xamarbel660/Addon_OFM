@@ -4,7 +4,7 @@
     <record id="staff_list_action" model="ir.actions.act_window">
       <field name="name">Staff</field>
       <field name="res_model">ofm.staff</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,kanban,form</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">Crea al primer Staff</p>
       </field>
@@ -16,6 +16,12 @@
       <field name="model">ofm.staff</field>
       <field name="arch" type="xml">
         <form string="Staffs">
+          <header>
+            <button name="btn_contratar" string="Contratar" type="object" class="oe_highlight" states="candidato"/>
+            <button name="btn_dar_baja" string="Dar de Baja" type="object" states="contratado"/>
+            <button name="btn_candidato" string="Volver a Candidato" type="object" states="de_baja"/>
+          </header>
+
           <sheet layout="auto">
 
             <group>
@@ -23,9 +29,12 @@
                 <field name="nombre" />
                 <field name="nacionalidad" />
                 <field name="dni" />
+                <field name="fecha_nacimiento" />
+                <field name="activo" readonly="1"/>
               </group>
               <group>
                 <field name="rol" widget="statusbar" />
+                <field name="state" widget="statusbar"/>
                 <field name="turno" />
                 <field name="salario" />
               </group>
@@ -54,6 +63,46 @@
       </field>
     </record>
 
+    <!-- KANBAN -->
+    <record id="ofm_staff_kanban_view" model="ir.ui.view">
+      <field name="name">ofm.staff.kanban</field>
+      <field name="model">ofm.staff</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <templates>
+            <t t-name="kanban-box">
+              <!-- La tarjeta en si -->
+              <div class="oe_kanban_global_click">
+
+                <!-- Titulo de la tarjeta-->
+                <div class="o_kanban_record_top">
+                  <!-- El titulo es el nombre del artista -->
+                  <strong class="o_kanban_record_title">
+                    <field name="nombre"/>
+                  </strong>
+                </div>
+
+                <!-- Cuerpo de la tarjeta -->
+                <div class="o_kanban_record_body">
+                  <div>
+                    <span class="fa fa-clock-o"/>
+                    <strong>Turno: </strong>
+                    <field name="turno"/>
+                  </div>
+                  <div>
+                    <span class="fa fa-user"/>
+                    <strong>Rol: </strong>
+                    <field name="rol"/>
+                  </div>
+                </div>
+
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
     <!-- SEARCH -->
     <record id="ofm_staff_search_view" model="ir.ui.view">
       <field name="name">ofm.staff.search</field>
@@ -62,15 +111,18 @@
         <search string="Search">
           <!-- Filtros personalizados -->
           <filter string="Solo Técnicos" name="tecnicos" domain="[('rol', '=', 'tecnico')]"/>
-          <!-- Sirve para separar los filtros -->
-          <!-- <separator/> -->
           <filter string="Solo Seguridad" name="seguridad" domain="[('rol', '=', 'seguridad')]"/>
+          <!-- Sirve para separar los filtros -->
+          <separator/>
+          <filter string="Turno de Mañana" name="turno_mañana" domain="[('turno', '=', 'mañana')]"/>
+          <filter string="Turno de Tarde" name="turno_tarde" domain="[('turno', '=', 'tarde')]"/>
+          <filter string="Turno de Noche" name="turno_noche" domain="[('turno', '=', 'noche')]"/>
           <!-- Filtro al buscar en el buscador -->
           <field name="nombre" />
-          <field name="rol" />
           <!-- Agrupación personalizado -->
           <group expand="1" string="Agrupar por">
             <filter string="Rol" name="group_by_rol" context="{'group_by':'rol'}"/>
+            <filter string="Turno" name="group_by_turno" context="{'group_by':'turno'}"/>
           </group>
         </search>
       </field>

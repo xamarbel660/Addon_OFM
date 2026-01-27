@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class Entrada(models.Model):
-    _name = "fiesta.entrada"
+    _name = "ofm.entrada"
     _description = "Entrada de la fiesta"
     _rec_name = "nombre" 
     
@@ -27,7 +27,7 @@ class Entrada(models.Model):
     fecha_compra = fields.Datetime(string="Fecha y hora de compra", required=True)
 
     actuacion_id = fields.Many2one(
-    comodel_name="fiesta.actuacion",
+    comodel_name="ofm.actuacion",
     string="Concierto"
 )
     
@@ -39,10 +39,11 @@ class Entrada(models.Model):
     
     @api.depends('tipo')
     def _compute_precio(self):
-        if self.tipo == 'vip':
-            self.precio = 100.0
-        if self.tipo == 'general':
-            self.precio = 50.0
+        for record in self:
+            if record.tipo == 'vip':
+                record.precio = 100.0
+            if record.tipo == 'general':
+                record.precio = 50.0
             
     @api.depends('fecha_nacimiento')
     def _compute_edad(self):

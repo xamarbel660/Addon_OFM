@@ -17,18 +17,34 @@
       <field name="arch" type="xml">
         <form string="Artistas">
           <sheet layout="auto">
-            <group>
-              <group>
-                <field name="nombre" />
-                <field name="nacionalidad" />
-                <field name="dni" />
-              </group>
-              <group>
-                <field name="genero_musical" />
-                <field name="cache" />
-                <field name="rider_tecnico" />
-              </group>
-            </group>
+            <notebook>
+              <page name="datosPersonales" string="Datos Personales">
+                <group>
+                  <field name="nombre" />
+                  <field name="nacionalidad" />
+                  <field name="fecha_nacimiento" />
+                  <field name="activo" />
+                  <field name="dni" />
+                </group>
+              </page>
+              <page name="datosProfesionales" string="Datos Profesionales">
+                <group>
+                  <field name="genero_musical" />
+                  <field name="cache" />
+                  <field name="rider_tecnico" />
+                </group>
+              </page>
+              <page name="actuaciones" string="Actuaciones">
+                <field name="actuacion_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="fecha_inicio"/>
+                    <field name="fecha_fin"/>
+                    <field name="cant_entradas"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
 
           </sheet>
         </form>
@@ -43,6 +59,7 @@
         <tree string="tree_string">
           <field name="nombre" />
           <field name="genero_musical" />
+          <field name="nacionalidad"/>
         </tree>
       </field>
     </record>
@@ -52,14 +69,14 @@
       <field name="name">Artistas</field>
       <field name="model">ofm.artista</field>
       <field name="arch" type="xml">
-        <graph string="Cache por artista" type="bar">
+        <graph string="Presupuesto por Género Musical" type="pie">
           <field name="genero_musical" type="row"/>
           <field name="cache" type="measure"/>
         </graph>
       </field>
     </record>
 
-    <!-- KANBAN, buscar como se hace -->
+    <!-- KANBAN -->
     <record id="ofm_artista_kanban_view" model="ir.ui.view">
       <field name="name">ofm.artista.kanban</field>
       <field name="model">ofm.artista</field>
@@ -88,7 +105,8 @@
                   <div>
                     <!-- Cache el artista -->
                     <strong>Caché: </strong>
-                    <field name="cache"/>€
+                    <field name="cache"/>
+€
                   </div>
                 </div>
 

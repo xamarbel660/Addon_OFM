@@ -2,7 +2,7 @@
   <data>
   <record id="view_actuacion_tree" model="ir.ui.view">
       <field name="name">actuacion.tree</field>
-      <field name="model">fiesta.actuacion</field>
+      <field name="model">ofm.actuacion</field>
       <field name="arch" type="xml">
         <tree string="Actuaciones">
             <field name="name"/>
@@ -16,7 +16,7 @@
     
   <record id="view_actuacion_form" model="ir.ui.view">
     <field name="name">actuacion.form</field>
-    <field name="model">fiesta.actuacion</field>
+    <field name="model">ofm.actuacion</field>
     <field name="arch" type="xml">
       <form string="Entradas">
         <sheet>
@@ -36,6 +36,12 @@
               </group>
             </page>
 
+            <page string="Artistas">
+              <group>
+                <field name="artista_ids"/>
+              </group>
+            </page>
+
           </notebook>
         </sheet>
       </form>
@@ -43,8 +49,8 @@
   </record>
 
   <record id="fiesta_actuacion_graph_view" model="ir.ui.view">
-    <field name="name">fiesta.actuacion.graph</field>
-    <field name="model">fiesta.actuacion</field>
+    <field name="name">ofm.actuacion.graph</field>
+    <field name="model">ofm.actuacion</field>
     <field name="arch" type="xml">
       <graph string="Cantidad de personas por concierto" type= "bar">
         <field name="cant_entradas" type="measure"/>
@@ -54,8 +60,8 @@
   </record>
 
     <record id="fiesta_actuacion_calendar_view" model="ir.ui.view">
-    <field name="name">fiesta.actuacion.calendar</field>
-    <field name="model">fiesta.actuacion</field>
+    <field name="name">ofm.actuacion.calendar</field>
+    <field name="model">ofm.actuacion</field>
     <field name="arch" type="xml">
       <calendar string="Horarios" date_start="fecha_inicio" date_stop="fecha_fin" mode="month">
         <field name="name" />
@@ -69,7 +75,7 @@
     <!--Nombre que van a ver en la view-->
       <field name="name">Actuaciones</field>
       <!--El modelo que se va a cargar(Lo que está rodeado por el field)-->
-      <field name="res_model">fiesta.actuacion</field>
+      <field name="res_model">ofm.actuacion</field>
       <!--De la forma que se va a ver la información-->
       <field name="view_mode">tree,form,graph,calendar</field>
       <!--Este es el mensaje que va a aparecer si no hay datos-->

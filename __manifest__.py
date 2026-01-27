@@ -24,12 +24,16 @@
     # always loaded
     "data": [
         "security/ir.model.access.csv",
-        "views/artista.xml",
-        "views/staff.xml",
+        "views/actuacion_views.xml",
+        "views/entrada_views.xml",
+        "views/artista_view.xml",
+        "views/staff_view.xml",
         "views/menu_view.xml",
         "reports/reports.xml",
         "reports/artista_report.xml",
         "reports/staff_report.xml",
+        "reports/entrada_report.xml",
+        "reports/actuacion_report.xml",
     ],
     # only loaded in demonstration mode
     "demo": [

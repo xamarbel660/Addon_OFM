@@ -8,11 +8,11 @@ class Participante(models.Model):
 
     nombre = fields.Char(string="Nombre", required=True, help="Nombre del participante", size=25)
     nacionalidad = fields.Many2one("res.country", "Nacionalidad")
-    # nacionalidad = fields.Char(string="Nacionalidad", required=True, help="Nacionalidad del participante")
     dni = fields.Char(string="DNI", required=True, help="DNI del participante", size=9)
+    fecha_nacimiento = fields.Date(string="Fecha de Nacimiento")
+    activo = fields.Boolean(string="Activo", default=True)
     
     # Restricción de unicidad en el campo DNI
-    
     _sql_constraints = [
         ('dni_uniq',
         'UNIQUE (dni)',

@@ -17,4 +17,22 @@
         name="ofm.report_staff_template" 
         file="ofm.report_staff_template"
     />
+
+    <report 
+        id="action_report_entrada" 
+        string="Ficha de la Entrada" 
+        model="ofm.entrada" 
+        report_type="qweb-pdf" 
+        name="ofm.report_entrada_template" 
+        file="ofm.report_entrada_template"
+    />
+
+    <report 
+        id="action_report_actuacion" 
+        string="Ficha de la Actuacion" 
+        model="ofm.actuacion" 
+        report_type="qweb-pdf" 
+        name="ofm.report_actuacion_template" 
+        file="ofm.report_actuacion_template"
+    />
 </odoo>
