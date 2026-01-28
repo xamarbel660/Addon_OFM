@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>  
-    <data noupdate="1">
+    <data>
 
         <!-- Top menu item MODULO -->
-        <!-- <menuitem name="OFM" id="ofm.menu_root" groups="group_gym_manager"/> -->
-        <menuitem name="OFM" id="ofm.menu_root"/>
+        <menuitem name="OFM" id="menu_root"/>
 
         <!-- menu categories MODELO -->
-        <menuitem name="Artista" id="ofm.artista" parent="ofm.menu_root"/>
-        <menuitem name="Staff" id="ofm.staff" parent="ofm.menu_root"/>
-        <menuitem name="Actuacion" id="ofm.actuacion" parent="ofm.menu_root"/>
-        <menuitem name="Entrada" id="ofm.entrada" parent="ofm.menu_root"/>
+        <menuitem name="Artista" id="artista" parent="menu_root"/>
+        <menuitem name="Staff" id="staff" parent="menu_root"/>
+        <menuitem name="Actuacion" id="actuacion" parent="menu_root"/>
+        <menuitem name="Entrada" id="entrada" parent="menu_root"/>
 
         <!-- actions -->
-        <menuitem name="Listado de artistas" id="artista_menu_listado" parent="ofm.artista" action="artista_list_action"/>
-        <menuitem name="Listado de staffs" id="staff_menu_listado" parent="ofm.staff" action="staff_list_action"/>
-        <menuitem name="Listado de actuaciones" id="actuacion_menu_listado" parent="ofm.actuacion" action="actuacion_list_action"/>
-        <menuitem name="Listado de entradas" id="entrada_menu_listado" parent="ofm.entrada" action="entrada_list_action"/>
+        <menuitem name="Listado de artistas" id="artista_menu_listado" parent="artista" action="artista_list_action"/>
+        <menuitem name="Listado de staffs" id="staff_menu_listado" parent="staff" action="staff_list_action"/>
+        <menuitem name="Listado de actuaciones" id="actuacion_menu_listado" parent="actuacion" action="actuacion_list_action"/>
+        <menuitem name="Listado de entradas" id="entrada_menu_listado" parent="entrada" action="entrada_list_action"/>
 
     </data>
 </odoo>
