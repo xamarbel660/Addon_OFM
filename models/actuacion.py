@@ -19,6 +19,11 @@ class Actuacion(models.Model):
         comodel_name="ofm.artista",
         string="Artistas"
     )
+
+    escenario_id = fields.Many2one(
+        comodel_name='ofm.escenario', 
+        string='Escenario'
+    )
     
     cant_entradas = fields.Integer(string="Cantidad de entradas", compute="_compute_cant_entradas", store=True)
     
