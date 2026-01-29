@@ -10,12 +10,16 @@
         <menuitem name="Staff" id="staff" parent="menu_root"/>
         <menuitem name="Actuacion" id="actuacion" parent="menu_root"/>
         <menuitem name="Entrada" id="entrada" parent="menu_root"/>
+        <menuitem name="Escenario" id="escenario" parent="menu_root"/>
+        <menuitem name="Patrocinador" id="patrocinador" parent="menu_root"/>
 
         <!-- actions -->
         <menuitem name="Listado de artistas" id="artista_menu_listado" parent="artista" action="artista_list_action"/>
         <menuitem name="Listado de staffs" id="staff_menu_listado" parent="staff" action="staff_list_action"/>
         <menuitem name="Listado de actuaciones" id="actuacion_menu_listado" parent="actuacion" action="actuacion_list_action"/>
         <menuitem name="Listado de entradas" id="entrada_menu_listado" parent="entrada" action="entrada_list_action"/>
+        <menuitem name="Listado de escenarios" id="escenario_menu_listado" parent="escenario" action="escenario_list_action"/>
+        <menuitem name="Listado de patrocinadores" id="patrocinador_menu_listado" parent="patrocinador" action="patrocinador_list_action"/>
 
     </data>
 </odoo>
