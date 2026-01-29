@@ -1,24 +1,38 @@
 from odoo import models, fields, api
 
-
 class Escenario(models.Model):
     _name = "ofm.escenario"
-    _description = "Escenario del Festival"
-    _rec_name = "nombre"
+    _description = "Escenario de la fiesta"
 
-    nombre = fields.Char(string="Nombre", required=True)
-    lugarFisico = fields.Selection(
-        [
-            ("escenario_principal", "Escenario Principal"),
-            ("carpa_dance", "Carpa Dance"),
-            ("carpa_rock", "Carpa Rock"),
-            ("carpa_pop", "Carpa Pop"),
-        ],
-        string="Lugar Fisico",
-        default="escenario_principal",
+    name = fields.Text(
+        string='Nombre del escenario',
+        required=True, unique=True
     )
 
-    patrocinadores = fields.Many2many("ofm.patrocinador", string="Patrocinadores")
-    actuacion_ids = fields.One2many(
-        comodel_name="ofm.actuacion", inverse_name="escenario_id", string="Actuaciones"
+
+    ubicacion = fields.Text(string="Ubicación del escenario")
+
+    tema = fields.Text(string="Tema del escenario")
+
+    actuaciones_ids = fields.One2many(
+    comodel_name="ofm.actuacion",
+    inverse_name="escenario_id",
+    string="Actuaciones"
+)
+    patrocinadores_ids= fields.Many2many(
+        comodel_name="ofm.patrocinador",
+        string="Patrocinadores"
     )
+
+    numero_de_actuaciones = fields.Integer(string="Cantidad de actuaciones", compute="_compute_cant_actuaciones", store=True)
+    numero_de_patrocinadores = fields.Integer(string="Cantidad de patrocinadores", compute="_compute_cant_patrocinadores", store=True)
+
+    @api.depends('actuaciones_ids')
+    def _compute_cant_actuaciones(self):
+        for record in self:
+            record.numero_de_actuaciones = len(record.actuaciones_ids)
+
+    @api.depends('patrocinadores_ids')
+    def _compute_cant_patrocinadores(self):
+        for record in self:
+            record.numero_de_patrocinadores = len(record.patrocinadores_ids)

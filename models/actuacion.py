@@ -21,9 +21,9 @@ class Actuacion(models.Model):
     )
 
     escenario_id = fields.Many2one(
-        comodel_name='ofm.escenario', 
-        string='Escenario'
-    )
+    comodel_name="ofm.escenario",
+    string="Escenario"
+)
     
     cant_entradas = fields.Integer(string="Cantidad de entradas", compute="_compute_cant_entradas", store=True)
     
@@ -37,3 +37,4 @@ class Actuacion(models.Model):
         for record in self:
             if record.fecha_inicio > record.fecha_fin:
                 raise models.ValidationError("La fecha de inicio no puede ser posterior a la fecha de fin.")
+    
