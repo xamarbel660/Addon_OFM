@@ -3,3 +3,5 @@ access_participante_artista,ofm.artista,model_ofm_artista,base.group_user,1,1,1,
 access_participante_staff,ofm.staff,model_ofm_staff,base.group_user,1,1,1,1
 access_entrada,ofm.entrada,model_ofm_entrada,base.group_user,1,1,1,1
 access_actuacion,ofm.actuacion,model_ofm_actuacion,base.group_user,1,1,1,1
+access_patrocinador,ofm.patrocinador,model_ofm_patrocinador,base.group_user,1,1,1,1
+access_escenario,ofm.escenario,model_ofm_escenario,base.group_user,1,1,1,1
