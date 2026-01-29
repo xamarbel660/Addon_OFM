@@ -28,6 +28,8 @@
         "views/entrada_views.xml",
         "views/artista_view.xml",
         "views/staff_view.xml",
+        "views/escenario_view.xml",
+        "views/patrocinador_view.xml",
         "views/menu_view.xml",
         "reports/reports.xml",
         "reports/artista_report.xml",
