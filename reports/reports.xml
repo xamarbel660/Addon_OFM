@@ -35,4 +35,22 @@
         name="ofm.report_actuacion_template" 
         file="ofm.report_actuacion_template"
     />
+
+    <report 
+        id="action_report_patrocinador" 
+        string="Ficha del Patrocinador" 
+        model="ofm.patrocinador" 
+        report_type="qweb-pdf" 
+        name="ofm.report_patrocinador_template" 
+        file="ofm.report_patrocinador_template"
+    />
+
+    <report 
+        id="action_report_escenario" 
+        string="Ficha del escenario" 
+        model="ofm.escenario" 
+        report_type="qweb-pdf" 
+        name="ofm.report_escenario_template" 
+        file="ofm.report_escenario_template"
+    />
 </odoo>

@@ -1,0 +1,76 @@
+<odoo>
+    <template id="report_escenario_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <h2 class="text-center">Ficha del Escenario</h2>
+                        <h4 class="text-center text-muted">
+                            <strong>Nombre del Escenario:</strong>
+                            <span t-field="o.name"/>
+                        </h4>
+                        <br/>
+
+                        <h3>Datos</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Ubicación:</strong>
+                                    <span t-field="o.ubicacion"/>
+                                </p>
+                                <p>
+                                    <strong>tema:</strong>
+                                    <span t-field="o.tema"/>
+                                </p>
+
+                                <p>
+                                    <strong>numero de patrocinadores</strong>
+                                    <span t-field="o.numero_de_patrocinadores"/>
+                                </p>
+                                <p>
+                                    <strong>numero de actuaciones</strong>
+                                    <span t-field="o.numero_de_actuaciones"/>
+                                </p>
+                                
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <h3>Patrocinadores</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Patrocinadores:</strong>
+                                    <ul>
+                                        <li t-foreach="o.patrocinadores_ids" t-as="p">
+                                            <span t-esc="p.name"/>
+                                        </li>
+                                    </ul>
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3>Actuaciones</h3>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    <strong>Actuaciones:</strong>
+                                    <ul>
+                                        <li t-foreach="o.actuaciones_ids" t-as="a">
+                                            <span t-esc="a.name"/>
+                                        </li>
+                                    </ul>
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
