@@ -31,6 +31,8 @@
         "views/escenario_view.xml",
         "views/patrocinador_view.xml",
         "views/menu_view.xml",
+        "reports/escenario_report.xml",
+        "reports/patrocinador_report.xml",
         "reports/reports.xml",
         "reports/artista_report.xml",
         "reports/staff_report.xml",
