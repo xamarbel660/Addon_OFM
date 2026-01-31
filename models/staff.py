@@ -13,7 +13,8 @@ class Staff(models.Model):
             ("seguridad", "Seguridad"),
             ("tecnico", "Tecnico"),
         ],
-        "Rol",
+        string="Rol",
+        default="tecnico",
         required=True,
     )
 
