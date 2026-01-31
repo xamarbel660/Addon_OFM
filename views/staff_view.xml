@@ -11,6 +11,7 @@
     </record>
 
     <!-- FORM -->
+    <!-- Sin herencia -->
     <!-- <record id="ofm_staff_form_view" model="ir.ui.view">
       <field name="name">ofm.staff.form</field>
       <field name="model">ofm.staff</field>
@@ -52,7 +53,7 @@
     <record id="ofm_staff_form_view" model="ir.ui.view">
       <field name="name">ofm.staff.form</field>
       <field name="model">ofm.staff</field>
-      <field name="inherit_id" ref="ofm.view_participante_form"/>
+      <field name="inherit_id" ref="view_participante_form"/>
       <field name="mode">primary</field>
 
       <field name="arch" type="xml">
@@ -71,6 +72,7 @@
     </record>
 
     <!-- TREE -->
+    <!-- Sin herencia -->
     <!-- <record id="ofm_staff_tree_view" model="ir.ui.view">
       <field name="name">ofm.staff.tree</field>
       <field name="model">ofm.staff</field>
@@ -86,7 +88,7 @@
     <record id="ofm_staff_tree_view" model="ir.ui.view">
       <field name="name">ofm.staff.tree</field>
       <field name="model">ofm.staff</field>
-      <field name="inherit_id" ref="ofm.view_participante_tree"/>
+      <field name="inherit_id" ref="view_participante_tree"/>
       <field name="mode">primary</field>
       <field name="arch" type="xml">
         <field name="nacionalidad" position="after">

@@ -11,6 +11,7 @@
     </record>
 
     <!-- FORM -->
+    <!-- Sin herencia -->
     <!-- <record id="ofm_artista_form_view" model="ir.ui.view">
       <field name="name">ofm.artista.form</field>
       <field name="model">ofm.artista</field>
@@ -54,7 +55,7 @@
       <field name="name">ofm.artista.form</field>
       <field name="model">ofm.artista</field>
       <!-- Ref es el id del view que hereda -->
-      <field name="inherit_id" ref="ofm.view_participante_form"/>
+      <field name="inherit_id" ref="view_participante_form"/>
       <field name="mode">primary</field>
 
       <field name="arch" type="xml">
@@ -91,7 +92,7 @@
     <record id="ofm_artista_tree_view" model="ir.ui.view">
       <field name="name">ofm.artista.tree</field>
       <field name="model">ofm.artista</field>
-      <field name="inherit_id" ref="ofm.view_participante_tree"/>
+      <field name="inherit_id" ref="view_participante_tree"/>
       <field name="mode">primary</field>
       <field name="arch" type="xml">
         <field name="nacionalidad" position="after">
