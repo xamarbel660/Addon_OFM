@@ -41,16 +41,16 @@ class Staff(models.Model):
 
     # Actualizamos las funciones para usar 'state'
     def btn_contratar(self):
-        self.state = "contratado"
-        self.activo = True 
+        self.write({"state": "contratado"})
+        self.write({"activo": True})
 
     def btn_dar_baja(self):
-        self.state = "de_baja"
-        self.activo = False 
+        self.write({"state": "de_baja"})
+        self.write({"activo": False}) 
 
     def btn_candidato(self):
-        self.state = "candidato"
-        self.activo = False
+        self.write({"state": "candidato"})
+        self.write({"activo": False})
 
     # Botones para cambiar el rol del staff
     def btn_rol_to_seguridad(self):
