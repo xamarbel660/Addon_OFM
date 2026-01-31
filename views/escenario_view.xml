@@ -28,6 +28,17 @@
                   <field name="ubicacion"/>
                   <field name="tema"/>
                 </group>
+
+                <group>
+                  <field name="state" widget="statusbar"/>
+                </group>
+
+                <group>
+                  <button name="action_escenario_terminado" string="Escenario terminado" type="object" class="oe_highlight"/>
+                  <button name="action_escenario_cancelado" string="Escenario Cancelado" type="object" class="oe_highlight"/>
+                  <button name="action_escenario_en_proceso" string="Escenario en Proceso" type="object" class="oe_highlight"/>
+                  
+                </group>
               </page>
 
               <page string="Patrocinadores del Escenario">

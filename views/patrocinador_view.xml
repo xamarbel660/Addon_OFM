@@ -25,6 +25,16 @@
                 <field name="name"/>
                 <field name="pais"/>
               </group>
+
+              <group>
+                  <field name="state" widget="statusbar"/>
+              </group>
+
+              <group>
+                <button name="action_patrocinador_activo" string="Activar Patrocinador" type="object" class="oe_highlight"/>
+                <button name="action_patrocinador_cancelado" string="Cancelar Patrocinador" type="object" class="oe_highlight"/>
+                <button name="action_patrocinador_propuesto" string="Poner como Propuesto" type="object" class="oe_highlight"/>
+              </group>
             </page>
 
             <page string="Escenarios Patrocinados">
