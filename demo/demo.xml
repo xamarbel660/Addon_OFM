@@ -367,6 +367,22 @@
       <field name="numero_de_escenarios">1</field>
     </record>
 
+    <!-- Patrocinadores -->
+    <record id="demo_patrocinador_redbull" model="ofm.patrocinador">
+      <field name="name">Red Bull Energy</field>
+      <field name="pais" ref="base.es"/>
+      <field name="state">activo</field>
+    </record>
+
+    <!-- Escenario -->
+    <record id="demo_escenario_principal" model="ofm.escenario">
+      <field name="name">Escenario Principal - Thunderdome</field>
+      <field name="ubicacion">Zona Norte, explanada junto a la Puerta 4</field>
+      <field name="tema">Estética Cyberpunk con luces de Neón</field>
+      <field name="state">en_proceso</field>
+      <field name="actuaciones_ids" eval="[(4, ref('actuacion_1'))]" />
+      <field name="patrocinadores_ids" eval="[(4, ref('demo_patrocinador_redbull'))]"/>
+    </record>
 
   </data>
 </odoo>
