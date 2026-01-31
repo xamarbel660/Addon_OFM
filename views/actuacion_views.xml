@@ -42,6 +42,12 @@
               </group>
             </page>
 
+            <page string="Escenario">
+              <group>
+                <field name="escenario_id"/>
+              </group>
+            </page>
+
           </notebook>
         </sheet>
       </form>

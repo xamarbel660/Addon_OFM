@@ -17,13 +17,15 @@ class Actuacion(models.Model):
 
     artista_ids = fields.Many2many(
         comodel_name="ofm.artista",
+        inverse_name="actuacion_ids",
         string="Artistas"
     )
 
     escenario_id = fields.Many2one(
-    comodel_name="ofm.escenario",
-    string="Escenario"
-)
+        comodel_name="ofm.escenario",
+        inverse_name="actuacion_ids",
+        string="Escenario"
+    )
     
     cant_entradas = fields.Integer(string="Cantidad de entradas", compute="_compute_cant_entradas", store=True)
     

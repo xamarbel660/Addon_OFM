@@ -12,9 +12,10 @@ class Patrocinador(models.Model):
     pais = fields.Many2one("res.country", "Pais")
 
     escenarios_ids = fields.Many2many(
-    comodel_name="ofm.escenario",
-    string="Escenarios"
-)
+        comodel_name="ofm.escenario",
+        inverse_name="patrocinadores_ids",
+        string="Escenarios"
+    )
     
     numero_de_escenarios = fields.Integer(string="Cantidad de escenarios patrocinados", compute="_compute_cant_escenarios", store=True)
 

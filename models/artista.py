@@ -18,7 +18,8 @@ class Artista(models.Model):
 
     # Actuaciones del Artista
     actuacion_ids = fields.Many2many(
-        'ofm.actuacion', 
+        comodel_name="ofm.actuacion",
+        inverse_name="artista_ids",
         string="Actuaciones Previstas"
     )
 

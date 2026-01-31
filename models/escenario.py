@@ -15,12 +15,14 @@ class Escenario(models.Model):
     tema = fields.Text(string="Tema del escenario")
 
     actuaciones_ids = fields.One2many(
-    comodel_name="ofm.actuacion",
-    inverse_name="escenario_id",
-    string="Actuaciones"
-)
+        comodel_name="ofm.actuacion",
+        inverse_name="escenario_id",
+        string="Actuaciones"
+    )
+
     patrocinadores_ids= fields.Many2many(
         comodel_name="ofm.patrocinador",
+        inverse_name="escenario_id",
         string="Patrocinadores"
     )
 
