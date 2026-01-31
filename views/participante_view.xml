@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record id="view_participante_form" model="ir.ui.view">
+            <field name="name">ofm.participante.form</field>
+            <field name="model">ofm.participante</field>
+            <field name="arch" type="xml">
+                <form string="Participante">
+                    <sheet>
+                        <field name="foto" widget="image" class="oe_avatar"/>
+                        <group>
+                            <group>
+                                <field name="nombre"/>
+                                <field name="dni"/>
+                                <field name="nacionalidad"/>
+                            </group>
+                            <group>
+                                <field name="fecha_nacimiento"/>
+                                <field name="activo"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_participante_tree" model="ir.ui.view">
+            <field name="name">ofm.participante.tree</field>
+            <field name="model">ofm.participante</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="foto" widget="image" options='{"size": [20, 20]}'/>
+                    <field name="nacionalidad"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

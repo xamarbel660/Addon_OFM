@@ -11,6 +11,7 @@ class Participante(models.Model):
     dni = fields.Char(string="DNI", required=True, help="DNI del participante", size=9)
     fecha_nacimiento = fields.Date(string="Fecha de Nacimiento")
     activo = fields.Boolean(string="Activo", default=True)
+    foto = fields.Binary(string="Foto")
     
     # Restricción de unicidad en el campo DNI
     _sql_constraints = [

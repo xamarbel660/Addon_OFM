@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de sistema (Mac/Windows)
+.DS_Store
+Thumbs.db

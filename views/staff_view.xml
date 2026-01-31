@@ -11,7 +11,7 @@
     </record>
 
     <!-- FORM -->
-    <record id="ofm_staff_form_view" model="ir.ui.view">
+    <!-- <record id="ofm_staff_form_view" model="ir.ui.view">
       <field name="name">ofm.staff.form</field>
       <field name="model">ofm.staff</field>
       <field name="arch" type="xml">
@@ -38,7 +38,6 @@
                 <field name="turno" />
                 <field name="salario" />
               </group>
-              <!-- Botones para cambiar de rol -->
               <group>
                 <button name="btn_rol_to_seguridad" string="Seguridad" type="object" class="oe_highlight" title="Cambiar rol a Seguridad"/>
                 <button name="btn_rol_to_tecnico" string="Técnico" type="object" class="oe_highlight" title="Cambiar rol a Técnico"/>
@@ -48,10 +47,31 @@
           </sheet>
         </form>
       </field>
+    </record> -->
+
+    <record id="ofm_staff_form_view" model="ir.ui.view">
+      <field name="name">ofm.staff.form</field>
+      <field name="model">ofm.staff</field>
+      <field name="inherit_id" ref="ofm.view_participante_form"/>
+      <field name="mode">primary</field>
+
+      <field name="arch" type="xml">
+        <xpath expr="//group" position="after">
+          <group>
+            <field name="rol" widget="statusbar"/>
+            <field name="turno"/>
+            <field name="salario"/>
+            <field name="state" invisible="1"/>
+          </group>
+          <header>
+            <button name="btn_contratar" string="Contratar" type="object" class="oe_highlight" states="candidato"/>
+          </header>
+        </xpath>
+      </field>
     </record>
 
     <!-- TREE -->
-    <record id="ofm_staff_tree_view" model="ir.ui.view">
+    <!-- <record id="ofm_staff_tree_view" model="ir.ui.view">
       <field name="name">ofm.staff.tree</field>
       <field name="model">ofm.staff</field>
       <field name="arch" type="xml">
@@ -60,6 +80,20 @@
           <field name="rol" />
           <field name="turno" />
         </tree>
+      </field>
+    </record> -->
+
+    <record id="ofm_staff_tree_view" model="ir.ui.view">
+      <field name="name">ofm.staff.tree</field>
+      <field name="model">ofm.staff</field>
+      <field name="inherit_id" ref="ofm.view_participante_tree"/>
+      <field name="mode">primary</field>
+      <field name="arch" type="xml">
+        <field name="nacionalidad" position="after">
+          <field name="rol"/>
+          <field name="turno"/>
+        </field>
+
       </field>
     </record>
 

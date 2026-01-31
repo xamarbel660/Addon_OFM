@@ -24,6 +24,7 @@
     # always loaded
     "data": [
         "security/ir.model.access.csv",
+        'views/participante_view.xml',
         "views/actuacion_views.xml",
         "views/entrada_views.xml",
         "views/artista_view.xml",
