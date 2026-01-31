@@ -344,6 +344,28 @@
       <field name="state">confirmada</field>
     </record>
 
+    <!-- Escenario -->
+
+    <record id="escenario_demo_1" model="ofm.escenario">
+      <field name="name">migel</field>
+      <field name="ubicacion">1990-12-12</field>
+      <field name="tema">rock</field>
+      <field name="state">en_proceso</field>
+      <field name="actuaciones_ids" ref="actuacion_1"/>
+      <field name="numero_de_actuaciones">2</field>
+      <field name="patrocinadores_ids" ref="patrocinador_1"/>
+      <field name="numero_de_patrocinadores">1</field>
+    </record>
+
+
+    <!-- Patrocinadores -->
+    <record id="patrocinador_1" model="ofm.patrocinador">
+      <field name="name">Empresa XYZ</field>
+      <field name="pais">España</field>
+      <field name="state">activo</field>
+      <field name="escenarios_ids" ref="escenario_demo_1"/>
+      <field name="numero_de_escenarios">1</field>
+    </record>
 
 
   </data>
